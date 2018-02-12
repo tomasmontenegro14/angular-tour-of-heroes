@@ -1,0 +1,24 @@
+
+<div *ngIf="usuario">
+
+  <h2>{{ usuario.nombres | uppercase }} {{ usuario.apellidos  | uppercase }} Detalles</h2>
+  <div>
+    <label>
+      Nombres:
+      <input [(ngModel)]=" usuario.nombres" placeholder="nombres">
+    </label>
+  </div>
+
+  <div>
+    <label>
+      Apellidos:
+      <input [(ngModel)]="usuario.apellidos" placeholder="Apellidos" />
+    </label>
+  </div>
+  <div>
+    <label>
+      E-mail:
+      <input [(ngModel)]="usuario.email" placeholder="E-mail" />
+    </label>
+  </div>
+</div>
