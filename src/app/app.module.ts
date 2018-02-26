@@ -8,6 +8,8 @@ import { UsuarioDetalleComponent } from './usuario-detalle/usuario-detalle.compo
 import { UsuarioService } from './usuario.service';
 import { MessageService } from './message.service';
 import { MessagesComponent } from './messages/messages.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -15,11 +17,13 @@ import { MessagesComponent } from './messages/messages.component';
     AppComponent,
     UsersComponent,
     UsuarioDetalleComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [
     UsuarioService,

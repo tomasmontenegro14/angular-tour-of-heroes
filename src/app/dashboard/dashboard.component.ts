@@ -4,14 +4,13 @@ import { User } from '../user';
 import { UsuarioService } from '../usuario.service';
 
 @Component({
-  selector: 'app-users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.css']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
+export class DashboardComponent implements OnInit {
 
-export class UsersComponent implements OnInit {
-
-  usuarios: User[];
+  usuarios: User[] = [];
 
   constructor(private usuarioService: UsuarioService) { }
 
@@ -20,9 +19,9 @@ export class UsersComponent implements OnInit {
   }
 
 
-
   getUsuarios(): void {
     this.usuarioService.getUsuarios()
-        .subscribe(usuarios => this.usuarios = usuarios);
+      .subscribe(usuarios => this.usuarios = usuarios.slice(1,5));
   }
+
 }
